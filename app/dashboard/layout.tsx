@@ -7,8 +7,8 @@ const layout = ({children}:PropsWithChildren) => {
   return (
    <>
      <Navbar/>
-      <Sidebar />
-      <main className='pl-55 top-12'>
+      <Sidebar className='hidden md:block md:fixed '/>
+      <main className='md:pl-55 top-12'>
       {children}
       </main>
    </>

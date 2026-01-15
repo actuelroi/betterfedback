@@ -10,8 +10,13 @@ import { FaBookBookmark } from "react-icons/fa6";
 import { GoGraph } from "react-icons/go";
 import { IoChatbubbleOutline, IoMoon, IoPeopleSharp } from "react-icons/io5";
 import { CiBrightnessUp } from "react-icons/ci";
+import { cn } from "@/lib/utils";
 
-const Sidebar = () => {
+type Props = {
+  className?: string;
+};
+
+const Sidebar = ({className}:Props) => {
   const sidebarNavItem = [
     {
        title: 'Deploy & Integration',
@@ -67,7 +72,7 @@ const Sidebar = () => {
     
   ]
   return (
-   <aside className="fixed left-0 top-12 h-[calc(100vh-3rem)] w-50 border-r bg-background overflow-y-scroll">
+   <aside className={cn(" left-0 top-12 h-[calc(100vh-3rem)] md:w-50 border-r bg-background overflow-y-scroll p-3 w-full",className) }>
       <div className="flex flex-col p-3 gap-4">
         <div className="flex items-center justify-start w-full">
           <Button className="flex items-center justify-center gap-2 rounded-lg border  py-2 text-sm 
