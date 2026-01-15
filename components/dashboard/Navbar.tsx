@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className='md:flex md:flex-row gap-x-12 pr-10 hidden '>
          {
           navItem.map((item, index)=>(
-            <Link href={item.href} key={index} className='flex items-center gap-2 cursor-pointer p-2'>
+            <Link href={item.href} key={index} className='flex items-center gap-2 cursor-pointer p-2 text-muted-foreground'>
                 <item.icon  size={18}/>
             </Link>
           ))

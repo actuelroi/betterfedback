@@ -11,6 +11,7 @@ import { GoGraph } from "react-icons/go";
 import { IoChatbubbleOutline, IoMoon, IoPeopleSharp } from "react-icons/io5";
 import { CiBrightnessUp } from "react-icons/ci";
 import { cn } from "@/lib/utils";
+import { PiStarFourBold } from "react-icons/pi";
 
 type Props = {
   className?: string;
@@ -40,7 +41,7 @@ const Sidebar = ({className}:Props) => {
     {
       title: 'Ask ai',
       href: '/ai',
-      icon: WiStars
+      icon: PiStarFourBold
 
     },
     {
