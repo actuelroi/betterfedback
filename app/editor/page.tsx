@@ -1,24 +1,32 @@
 "use client"
 
-import MainEditor from '@/components/editor/MainEditor'
+import LeftSide from '@/components/editor/LeftSide'
+import Main from '@/components/editor/Main'
 
+import MainEdit from '@/components/editor/MainEdit'
+import Middle from '@/components/editor/Middle'
+
+import RightSidebar from '@/components/editor/RightSidebar'
 
 const page = () => {
   return (
-    <section>
-        <div>
-            <div className='grid grid-cols-1 md:grid-cols-6'>
-              <div className='md:col-span-1 border-r '>
-                right side
-              </div>
-              <div className='md:col-span-4'>
-               <MainEditor/>
-              </div>
-              <div className='md:col-span-1 border-l '>
-                left side
-              </div>
-            </div>
+    <section className=" overflow-hidden">
+      <div className="  flex flex-col md:flex-row  h-full">
+        {/* LEFT */}
+        <div className="w-full md:w-60 border-r">
+          <LeftSide />
         </div>
+
+        {/* MAIN */}
+        <div className="flex-1 ">
+          <Middle />
+        </div>
+
+        {/* RIGHT */}
+        <div className="w-full md:w-70 border-l">
+          <RightSidebar />
+        </div>
+      </div>
     </section>
   )
 }

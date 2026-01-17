@@ -130,3 +130,18 @@ body,
 :root{
   @apply  h-full
 }
+
+
+/* Hide scrollbar but keep scroll */
+.hide-scrollbar {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
+html {
+  scrollbar-gutter: stable;
+}

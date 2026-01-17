@@ -3,10 +3,12 @@ import React, { PropsWithChildren } from 'react'
 
 const EditLayout = ({ children }: PropsWithChildren) => {
     return (
-        <div>
+        <>
             <EditorHeader/>
+            <main className='md:max-h-[90vh] md:overflow-hidden'>
             {children}
-        </div>
+            </main>
+        </>
     )
 }
 
